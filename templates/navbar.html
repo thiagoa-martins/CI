@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid container">
-        <a class="navbar-brand text-dark" href="/">Comunidade impressionadora</a>
+        <a class="navbar-brand text-dark" href="{{ url_for('home') }}">Comunidade impressionadora</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active text-secondary" aria-current="page" href="/">Início</a>
+                    <a class="nav-link active text-secondary" aria-current="page" href="{{ url_for('home') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-secondary" href="/usuarios">Usuários</a>
+                    <a class="nav-link text-secondary" href="{{ url_for('usuarios') }}">Usuários</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link text-secondary" href="/contato">Contato</a>
+                      <a class="nav-link text-secondary" href="{{ url_for('contato') }}">Contato</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
