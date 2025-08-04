@@ -1,6 +1,10 @@
+import os
+
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'chave-padrao')
 
 lista_de_usuarios = ['Thiago', 'Pedro', 'Munir', 'Vinicius', 'Ryan']
 
