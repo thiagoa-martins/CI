@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, render_template, url_for
+from forms import FormCriarConta, FormLogin
 
 app = Flask(__name__)
 
@@ -22,7 +23,9 @@ def usuarios():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    form_criar_conta = FormCriarConta()
+    form_login = FormLogin()
+    return render_template('login.html', form_criar_conta=form_criar_conta, form_login=form_login)
 
 if __name__ == '__main__':
     app.run(debug=True)
