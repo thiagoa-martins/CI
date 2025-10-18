@@ -105,16 +105,16 @@
                         <div class="form-group mb-2">
                             {{ form_criar_conta.confirmacao.label(class="form-control-label") }}
                             
-                             {% if form_criar_conta.senha.errors %}
-                                {{ form_criar_conta.senha(class="form-control is-invalid") }}
+                             {% if form_criar_conta.confirmacao.errors %}
+                                {{ form_criar_conta.confirmacao(class="form-control is-invalid") }}
                             <div class="invalid-feedback">
-                                {% for erro in form_criar_conta.senha.errors %}
+                                {% for erro in form_criar_conta.confirmacao.errors %}
                                     {{ erro }}
                                 {% endfor %}
                             </div>
                             
                             {% else %}
-                                {{ form_criar_conta.senha(class="form-control") }}
+                                {{ form_criar_conta.confirmacao(class="form-control") }}
                             {% endif %}
                         </div>
                     </fieldset>
