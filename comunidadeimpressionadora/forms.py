@@ -18,5 +18,5 @@ class FormCriarConta(FlaskForm):
 class FormLogin(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
     senha = PasswordField('Senha', validators=[DataRequired(), Length(6, 22)])
-    botao_submit_login = SubmitField('Fazer login')
     lembrar_senha = BooleanField('Lembrar senha')
+    botao_submit_login = SubmitField('Fazer login')
